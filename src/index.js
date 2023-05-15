@@ -101,6 +101,7 @@ function gameOver() {
     let gameStopped = stopGame();
     return gameStopped;
   }
+  
 }
 
 /**
@@ -209,8 +210,10 @@ function startTimer() {
 * the moles.
 *
 */
-function whack(event) { 
+function whack() { 
+ 
 updateScore();
+
   return points;
 }
 
@@ -258,6 +261,9 @@ function stopGame(){
 function startGame(){
   setDuration(10);
   showUp();
+  startTimer();
+  setEventListeners();
+  clearScore();
   return "game started";
 }
 
