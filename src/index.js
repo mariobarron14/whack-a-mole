@@ -69,6 +69,9 @@ function chooseHole(holes) {
   if (hole === lastHole) {
     return chooseHole(holes);
   }
+  if(lastHole.classList && lastHole.classList.contains('show')) {
+    lastHole.classList.toggle('show');
+  }
   lastHole = hole;
   return hole;
 }
