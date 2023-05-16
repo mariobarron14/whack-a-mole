@@ -20,7 +20,7 @@ h1 {
 
 h2 {
   text-align: center;
-  font-size: 40px;
+  font-size: 37px;
   font-family: "Courier New" ;
   color: black;
   -webkit-text-stroke: 1px black;
@@ -28,7 +28,7 @@ h2 {
 
 #start {
     text-align: center;
-    font-size: 30px;
+    font-size: 50px;
 }
 
 #timer{
