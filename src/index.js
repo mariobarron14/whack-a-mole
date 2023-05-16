@@ -131,7 +131,7 @@ function showAndHide(hole, delay){
 toggleVisibility(hole)  
   const timeoutID = setTimeout(() => {    
     gameOver();
-  }, 0); // TODO: change the setTimeout delay to the one provided as a parameter
+  }, delay); // TODO: change the setTimeout delay to the one provided as a parameter
   return timeoutID;
 }
 
@@ -249,6 +249,11 @@ function setDuration(duration) {
 function stopGame(){
   // stopAudio(song);  //optional
   clearInterval(timer);
+  holes.forEach(hole => {
+    if(hole.classList.contains('show')) {
+      hole.classList.toggle('show');
+    }
+  });
   return "game stopped";
 }
 
